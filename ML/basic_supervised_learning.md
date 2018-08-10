@@ -28,4 +28,30 @@
 * 데이터셋에 다양한 데이터 포인트가 많을수록 과대적합 없이 더 복잡한 모델을 만들 수 있다.
 * 보통 데이터 포인트를 더 많이 모으는 것이 다양성을 키워주므로 큰 데이터셋은 더 복잡한 모델을 만들 수 있게 해준다.
 * 그러나 같은 데이터 포인트를 중복하거나 매우 비슷한 데이터를 모으는 것은 도움이 되지 않는다.
-* TODO...
+
+### k-NN 알고리즘
+* 가장 간단한 머신러닝 알고리즘으로 훈련 데이터셋을 그냥 저장하는 것이 모델을 만드는 과정의 전부이다.
+* 새로운 데이터 포인트에 대해 예측할 땐 알고리즘이 훈련 데이터셋에서 가장 가까운 데이터 포인트, 즉 최근접 이웃을 찾는다.
+
+#### k-NN 알고리즘 - 분류 
+* 
+```
+from sklearn.model_selection import train_test_split
+X, y = mglearn.datasets.make_forge()
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)
+
+from sklearn.neighbors import KNeighborsClassifier
+clf = KNeighborsClassifier(n_neighbors=3)
+
+clf.fit(X_train, y_train)
+
+print('prediction: {}'.format(clf.predict(X_test)))
+print('score: {:.2f}'.format(clf.score(X_test, y_test)))
+```
+
+#### 장단점과 매개변수
+* KNeighborsClassifier 에 중요한 매개변수는 데이터 포인트 사이의 거리를 재는 방법과 이웃의 수이다.
+* 더 복잡한 알고리즘을 적용해보기 전에 시도해볼 수 있는 좋은 시작점 알고리즘이다.
+* 예측이 느리고 많은 특성을 처리하는 능력이 부족하여 현업에서는 잘 쓰지 않는다.
+* 이런 단점이 없는 알고리즘이 선형 모델이다.

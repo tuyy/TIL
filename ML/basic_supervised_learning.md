@@ -34,7 +34,6 @@
 * 새로운 데이터 포인트에 대해 예측할 땐 알고리즘이 훈련 데이터셋에서 가장 가까운 데이터 포인트, 즉 최근접 이웃을 찾는다.
 
 #### k-NN 알고리즘 - 분류 
-* 
 ```
 from sklearn.model_selection import train_test_split
 X, y = mglearn.datasets.make_forge()

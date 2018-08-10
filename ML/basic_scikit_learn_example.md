@@ -129,5 +129,5 @@ knn.fit(X_train, y_train) # 훈련..
 print("테스트 세트 정확도: {:.2f}".format(knn.score(X_test, y_test))) # 평가..
 ```
 
-
-
+### 참고자료
+* introduction to Machine Learning with Python - 안드레아스 뮐러, 세라 가이도 

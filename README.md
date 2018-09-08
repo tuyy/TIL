@@ -17,6 +17,7 @@
 * [memory_ classification.md](https://github.com/tuyy/TIL/blob/master/linux/memory_%20classification.md)
 * [cpu_load.md](https://github.com/tuyy/TIL/blob/master/linux/cpu_load.md)
 * [shared_linking.md](https://github.com/tuyy/TIL/blob/master/linux/shared_linking.md)
+* [static_vs_dynamic_library.md](https://github.com/tuyy/TIL/blob/master/linux/static_vs_dynamic_library.md)
 
 #### python
 * [GIL.md](https://github.com/tuyy/TIL/blob/master/python/GIL.md)

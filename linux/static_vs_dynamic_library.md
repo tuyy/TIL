@@ -6,6 +6,7 @@
 * 10MB 크기의 라이브러리를 추가해도 실질적으로 사용되는 객체만 APP에 복사된다.
 * 배포 시점에 라이브러리 충돌 같은 부분은 걱정 할 필요가 없다.
 * 라이브러리의 버전을 업데이트 해야한다면, 해당 정적 라이브러리 뿐만 아니라 APP도 다시 배포해야한다.
+* http://www.yolinux.com/TUTORIALS/LibraryArchives-StaticAndDynamic.html
 
 ##### 리눅스에서 정적 라이브러리 만들기
 ```C++

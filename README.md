@@ -4,8 +4,10 @@
 
 #### ML
 * [install_scikit-learn.md](https://github.com/tuyy/TIL/blob/master/ML/install_scikit-learn.md)
+* [install_jupyterlab.md](https://github.com/tuyy/TIL/blob/master/ML/install_jupyterlab.md)
 * [basic_supervised_learning.md](https://github.com/tuyy/TIL/blob/master/ML/basic_supervised_learning.md)
 * [basic_scikit_learn_example.md](https://github.com/tuyy/TIL/blob/master/ML/basic_scikit_learn_example.md)
+* [titanic_basic.ipynb](https://github.com/tuyy/TIL/blob/master/ML/titanic_basic.ipynb)
 
 #### cpp
 * [any.md](https://github.com/tuyy/TIL/blob/master/cpp/any.md)

@@ -126,3 +126,29 @@ $(TARGET) : $(OBJS)
 clean :
     $(RM) $(OBJS) $(TARGET)
 ```
+
+#### 8. 임시로 쓰자
+```
+.PHONY: all clean check
+
+CXX=g++
+
+CXXFLAGS=-std=c++14 -Wall -Werror -O0
+
+TARGET=main
+
+SRCS_CPP=$(wildcard *.cpp)
+OBJS:=$(SRCS_CPP:.cpp=.o)
+
+$(TARGET) : $(OBJS)
+    $(CXX) $(CXXFLAGS) -o $@ $(OBJS)
+
+all : $(TARGET)
+
+check : $(TARGET)
+    ./$(TARGET)
+
+clean :
+    $(RM) $(OBJS) $(TARGET)
+
+```

@@ -20,7 +20,7 @@
 ### system_clock VS steady_clock
 C++ stdlib is inside GCC source:
 
-* high_resolution_clock is an alias for system_clock or steady_clock
+* high_resolution_clock is an alias for system_clock or steady_clock (가볍고 빠르다.)
 
 * system_clock forwards to the first of the following that is available:
     * clock_gettime(CLOCK_REALTIME, ...)

@@ -24,6 +24,7 @@
 * [shared_linking.md](https://github.com/tuyy/TIL/blob/master/linux/shared_linking.md)
 * [static_vs_dynamic_library.md](https://github.com/tuyy/TIL/blob/master/linux/static_vs_dynamic_library.md)
 * [make_tutorial.md](https://github.com/tuyy/TIL/blob/master/linux/make_tutorial.md)
+* [clock.md](https://github.com/tuyy/TIL/blob/master/linux/clock.md)
 
 #### linux_command
 * [basic_cmd.md](https://github.com/tuyy/TIL/blob/master/linux_command/basic_cmd.md)

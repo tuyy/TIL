@@ -2,6 +2,9 @@
 
 ### Category
 
+#### Toy project list
+* [tutil](https://github.com/tuyy/tutil) : simple util project
+
 #### ML
 * [install_scikit-learn.md](https://github.com/tuyy/TIL/blob/master/ML/install_scikit-learn.md)
 * [install_jupyterlab.md](https://github.com/tuyy/TIL/blob/master/ML/install_jupyterlab.md)

@@ -22,5 +22,8 @@ std::shared_lock<std::shared_mutex> lock;
 * shared mode로 lock이 잡히면 exclusive mode의 lock은 block 상태가 된다.
 * exclusive mode로 lock이 잡히면 shared mode의 lock은 block 상태가 된다.
 * shared mode로 lock이 threshold 만큼 잡히면 이후 shared mode lock 요청은 block 된다.
+
+#### 결론
+* 고도의 성능이 필요하지 않는 이상, mutex를 쓰자. 시스템이 복잡해지기만 한다.
     
 * https://en.cppreference.com/w/cpp/named_req/SharedMutex

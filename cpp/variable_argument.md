@@ -39,7 +39,6 @@ std::string makeString(const char *format, ...)
 }
 
 // Parameter pack. C++11 이후부터 가능
-
 template <typename ... Args>
 std::string makeString(const char *aFormat, Args ... aArgs)
 {

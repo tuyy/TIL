@@ -60,4 +60,5 @@ std::string makeString(const char *aFormat, Args ... aArgs)
 }
 ```
 
+* https://en.cppreference.com/w/cpp/language/parameter_pack
 * http://www.cplusplus.com/reference/cstdarg/va_start/

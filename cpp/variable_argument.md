@@ -37,6 +37,28 @@ std::string makeString(const char *format, ...)
 
       return std::string(sBuffer.get(), sLen);
 }
+
+// Parameter pack. C++11 이후부터 가능
+
+template <typename ... Args>
+std::string makeString(const char *aFormat, Args ... aArgs)
+{
+    if (aFormat == nullptr)
+    {
+        return std::string();
+    }
+    else
+    {
+        int32_t sLen = std::snprintf(nullptr, 0, aFormat, aArgs...);
+        std::cout << "length:" << sLen << std::endl;
+
+        auto sBuffer = std::make_unique<char[]>(sLen + 1);
+
+        (void)std::snprintf(sBuffer.get(), sLen + 1, aFormat, aArgs...);
+
+        return std::string(sBuffer.get(), sLen);
+    }
+}
 ```
 
 * http://www.cplusplus.com/reference/cstdarg/va_start/

@@ -1,7 +1,10 @@
 #### variable_argument
 * ```#include <cstdarg>```
 * 가변인자 처리방법
-```C++
+```C++ 2가지 방법이 있다. va_list or parameter pack(C++11)
+* 주의! string format과 가변인자를 사용하는 경우
+    * va_list 방식은 인자가 필요없는 경우 안넣어도 된다.
+    * parameter pack 방식은 인자가 필요없는 경우에도 에러가 발생한다.
 
 #include <string>
 #include <cstdarg>

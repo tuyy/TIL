@@ -10,6 +10,7 @@
     * the allocator (type-erased);
     * the number of shared_ptrs that own the managed object;
     * the number of weak_ptrs that refer to the managed object.
+* control block에서 shared_ptr count와 weak_ptr count가 모두 0이되어야 managed pointer가 delete된다.
 * ```std::shared_ptr<T> ptr(new T);``` 로 shared_ptr을 생성하는 경우 두 번의 alloc이 발생한다.
 * std::unique_ptr은 std::shared_ptr로 형 변환이 가능하다.
 

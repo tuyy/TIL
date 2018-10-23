@@ -17,6 +17,7 @@
 * [shared_mutex_ex.md](https://github.com/tuyy/TIL/blob/master/cpp/shared_mutex_ex.md)
 * [variable_argument.md](https://github.com/tuyy/TIL/blob/master/cpp/variable_argument.md)
 * [make_shared.md](https://github.com/tuyy/TIL/blob/master/cpp/make_shared.md)
+* [weak_ptr.md](https://github.com/tuyy/TIL/blob/master/cpp/weak_ptr.md)
 
 #### docker
 * [docker_basic.md](https://github.com/tuyy/TIL/blob/master/docker/docker_basic.md)

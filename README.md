@@ -5,19 +5,15 @@
 #### Toy project list
 * [tutil](https://github.com/tuyy/tutil) : simple util project
 
-#### ML
-* [install_scikit-learn.md](https://github.com/tuyy/TIL/blob/master/ML/install_scikit-learn.md)
-* [install_jupyterlab.md](https://github.com/tuyy/TIL/blob/master/ML/install_jupyterlab.md)
-* [basic_supervised_learning.md](https://github.com/tuyy/TIL/blob/master/ML/basic_supervised_learning.md)
-* [basic_scikit_learn_example.md](https://github.com/tuyy/TIL/blob/master/ML/basic_scikit_learn_example.md)
-* [titanic_basic.ipynb](https://github.com/tuyy/TIL/blob/master/ML/titanic_basic.ipynb)
-
 #### cpp
 * [any.md](https://github.com/tuyy/TIL/blob/master/cpp/any.md)
 * [shared_mutex_ex.md](https://github.com/tuyy/TIL/blob/master/cpp/shared_mutex_ex.md)
 * [variable_argument.md](https://github.com/tuyy/TIL/blob/master/cpp/variable_argument.md)
 * [make_shared.md](https://github.com/tuyy/TIL/blob/master/cpp/make_shared.md)
 * [weak_ptr.md](https://github.com/tuyy/TIL/blob/master/cpp/weak_ptr.md)
+
+#### Effective Modern C++
+* [item1_understand_template_type_deduction.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item1_understand_template_type_deduction.md)
 
 #### docker
 * [docker_basic.md](https://github.com/tuyy/TIL/blob/master/docker/docker_basic.md)
@@ -44,6 +40,13 @@
 * [http2.md](https://github.com/tuyy/TIL/blob/master/web/http2.md)
 * [https.md](https://github.com/tuyy/TIL/blob/master/web/https.md)
 * [reverse_procxy.md](https://github.com/tuyy/TIL/blob/master/web/reverse_proxy.md)
+
+#### ML
+* [install_scikit-learn.md](https://github.com/tuyy/TIL/blob/master/ML/install_scikit-learn.md)
+* [install_jupyterlab.md](https://github.com/tuyy/TIL/blob/master/ML/install_jupyterlab.md)
+* [basic_supervised_learning.md](https://github.com/tuyy/TIL/blob/master/ML/basic_supervised_learning.md)
+* [basic_scikit_learn_example.md](https://github.com/tuyy/TIL/blob/master/ML/basic_scikit_learn_example.md)
+* [titanic_basic.ipynb](https://github.com/tuyy/TIL/blob/master/ML/titanic_basic.ipynb)
 
 #### kafka
 * [simple.md](https://github.com/tuyy/TIL/blob/master/kafka/simple.md)

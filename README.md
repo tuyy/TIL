@@ -15,6 +15,7 @@
 #### Effective Modern C++
 * [item01_understand_template_type_deduction.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item01_understand_template_type_deduction.md)
 * [item02_understand_auto_type_deduction.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item02_understand_auto_type_deduction.md)
+* [item03_understand_decltype.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item03_understand_decltype.md)
 
 #### docker
 * [docker_basic.md](https://github.com/tuyy/TIL/blob/master/docker/docker_basic.md)

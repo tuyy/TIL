@@ -13,8 +13,8 @@
 * [weak_ptr.md](https://github.com/tuyy/TIL/blob/master/cpp/weak_ptr.md)
 
 #### Effective Modern C++
-* [item1_understand_template_type_deduction.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item1_understand_template_type_deduction.md)
-* [item2_understand_auto_type_deduction.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item2_understand_auto_type_deduction.md)
+* [item01_understand_template_type_deduction.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item01_understand_template_type_deduction.md)
+* [item02_understand_auto_type_deduction.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item02_understand_auto_type_deduction.md)
 
 #### docker
 * [docker_basic.md](https://github.com/tuyy/TIL/blob/master/docker/docker_basic.md)

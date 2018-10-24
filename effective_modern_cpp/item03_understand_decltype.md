@@ -41,9 +41,18 @@ decltype(auto) foo_version3(Container &aContainer, const Index aIdx)
     return aContainer[aIdx];
 }
 
-// V4 in C++14
+// final v4 in C++14
 template <typename Container, typename Index>
 decltype(auto) foo_version4(Container &&aContainer, const Index aIdx)
+{
+    // 보편참조로 rvalue, lvalue 모두 받을 수 있다.
+    return std::forward<Container>(aContainer)[aIdx];
+}
+
+// Final v4 in C++11
+template <typename Container, typename Index>
+auto foo_version4(Container &&aContainer, const Index aIdx)
+    -> decltype(std::forward<Container>(aContainer)[aIdx])
 {
     // 보편참조로 rvalue, lvalue 모두 받을 수 있다.
     return std::forward<Container>(aContainer)[aIdx];
@@ -62,6 +71,21 @@ int32_t main()
 }
 ```
 
+* 주의할 점
+```C++
+decltype(auto) f1()
+{
+    int32_t i = 100;
+    return i;  // decltype(i) is int, so f1 returns int
+}
+
+// compile warning!
+decltype(auto) f2()
+{
+    int32_t i = 100;
+    return (i);  // decltype(i) is int&, so f2 returns int&
+}
+```
 
 ### 참고
 * Effective Modern C++ by Scott Meyers

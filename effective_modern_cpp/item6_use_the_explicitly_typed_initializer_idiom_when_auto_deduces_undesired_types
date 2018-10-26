@@ -1,4 +1,5 @@
-## Item 6: Use the explicitly typed initializer idiom when auto deduces undesired types.
+## Item 6: Use the explicitly typed initializer idiom when auto deduces undesired types
+
 * auto가 원치 않은 형식으로 deduction된다면 명시적으로 캐스팅해야한다.
 ```C++
 std::vector<bool> features(const Widget& w);

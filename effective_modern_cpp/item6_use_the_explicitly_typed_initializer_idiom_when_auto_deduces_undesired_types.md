@@ -1,4 +1,3 @@
-
 ## Item 6: Use the explicitly typed initializer idiom when auto deduces undesired types.
 * auto가 원치 않은 형식으로 deduction된다면 명시적으로 캐스팅해야한다.
 ```C++
@@ -18,4 +17,3 @@ auto highPriority = static_cast<bool>(features(w)[5]);
 
 ### 참고
 * Effective Modern C++ by Scott Meyers
-

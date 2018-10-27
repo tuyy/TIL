@@ -25,8 +25,7 @@
 * [item10_prefer_scoped_enums_to_unscoped_enums.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item10_prefer_scoped_enums_to_unscoped_enums.md)
 * [item11_prefer_deleted_functions_to_private_undefined.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item11_prefer_deleted_functions_to_private_undefined.md)
 * [item12_declare_overriding_functions_override.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item12_declare_overriding_functions_override.md)
-* [item13_prefer_const_iterotors_to_iterators.md]
-(https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item13_prefer_const_iterotors_to_iterators.md)
+* [item13_prefer_const_iterotors_to_iterators.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item13_prefer_const_iterotors_to_iterators.md)
 * [item14_declare_functions_noexcept_if_they_wont_emit_exceptions.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item14_declare_functions_noexcept_if_they_wont_emit_exceptions.md)
 * [item15_use_constexpr_whenever_possible.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item15_use_constexpr_whenever_possible.md)
 * [item16_make_const_member_functions_thread_safe.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item16_make_const_member_functions_thread_safe.md)

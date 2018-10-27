@@ -18,6 +18,7 @@
 * [item03_understand_decltype.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item03_understand_decltype.md)
 * [item04_know_how_to_view_deduced_types.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item04_know_how_to_view_deduced_types.md)
 * [item05_prefer_auto_to_explicit_type_declarations.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item05_prefer_auto_to_explicit_type_declarations.md)
+* [item6_use_the_explicitly_typed_initializer_idiom_when_auto_deduces_undesired_types.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item6_use_the_explicitly_typed_initializer_idiom_when_auto_deduces_undesired_types.md)
 
 #### docker
 * [docker_basic.md](https://github.com/tuyy/TIL/blob/master/docker/docker_basic.md)

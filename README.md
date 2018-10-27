@@ -23,6 +23,7 @@
 * [item08_prefer_nullptr_to_zero_and_NULL.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item08_prefer_nullptr_to_zero_and_NULL.md)
 * [item09_prefer_alias_declarations_to_typedefs.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item09_prefer_alias_declarations_to_typedefs.md)
 * [item10_prefer_scoped_enums_to_unscoped_enums.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item10_prefer_scoped_enums_to_unscoped_enums.md)
+* [item11_prefer_deleted_functions_to_private_undefined.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item11_prefer_deleted_functions_to_private_undefined.md)
 * [item12_declare_overriding_functions_override.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item12_declare_overriding_functions_override.md)
 
 #### docker

@@ -20,6 +20,10 @@
 * [item05_prefer_auto_to_explicit_type_declarations.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item05_prefer_auto_to_explicit_type_declarations.md)
 * [item06_use_the_explicitly_typed_initializer_idiom_when_auto_deduces_undesired_types.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item6_use_the_explicitly_typed_initializer_idiom_when_auto_deduces_undesired_types.md)
 * [item07_distinguish_between_brace_and_braket_when_creating_objects.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item07_distinguish_between_brace_and_braket_when_creating_objects.md)
+* [item08_prefer_nullptr_to_zero_and_NULL.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item08_prefer_nullptr_to_zero_and_NULL.md)
+* [item09_prefer_alias_declarations_to_typedefs.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item09_prefer_alias_declarations_to_typedefs.md)
+* [item10_prefer_scoped_enums_to_unscoped_enums.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item10_prefer_scoped_enums_to_unscoped_enums.md)
+* [item12_declare_overriding_functions_override.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item12_declare_overriding_functions_override.md)
 
 #### docker
 * [docker_basic.md](https://github.com/tuyy/TIL/blob/master/docker/docker_basic.md)

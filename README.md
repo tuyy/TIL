@@ -30,6 +30,11 @@
 * [item15_use_constexpr_whenever_possible.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item15_use_constexpr_whenever_possible.md)
 * [item16_make_const_member_functions_thread_safe.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item16_make_const_member_functions_thread_safe.md)
 * [item17_understand_special_member_function_generation.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item17_understand_special_member_function_generation.md)
+* [item18_use_unique_ptr_for_exclusive_ownership_resource_management.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item18_use_unique_ptr_for_exclusive_ownership_resource_management.md)
+* [item19_use_shared_ptr_for_shared_ownership_resource_management.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item19_use_shared_ptr_for_shared_ownership_resource_management.md)
+* [item20_use_weak_ptr_for_shared_ptr_like_pointers_that_can_dangle.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item20_use_weak_ptr_for_shared_ptr_like_pointers_that_can_dangle.md)
+* [item21_prefer_make_unique_mand_make_shared_to_direct_use_of_new.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item21_prefer_make_unique_mand_make_shared_to_direct_use_of_new.md)
+* [item22_when_using_the_pimpl_idiom_define_special_member_functions_in_the_implementation_file.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item22_when_using_the_pimpl_idiom_define_special_member_functions_in_the_implementation_file.md)
 
 #### docker
 * [docker_basic.md](https://github.com/tuyy/TIL/blob/master/docker/docker_basic.md)

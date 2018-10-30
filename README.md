@@ -50,6 +50,7 @@
 * [static_vs_dynamic_library.md](https://github.com/tuyy/TIL/blob/master/linux/static_vs_dynamic_library.md)
 * [make_tutorial.md](https://github.com/tuyy/TIL/blob/master/linux/make_tutorial.md)
 * [clock.md](https://github.com/tuyy/TIL/blob/master/linux/clock.md)
+* [bazel_buildtool.md](https://github.com/tuyy/TIL/blob/master/linux/bazel_buildtool.md)
 
 #### linux_command
 * [basic_cmd.md](https://github.com/tuyy/TIL/blob/master/linux_command/basic_cmd.md)

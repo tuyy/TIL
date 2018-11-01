@@ -36,6 +36,7 @@
 * [item21_prefer_make_unique_mand_make_shared_to_direct_use_of_new.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item21_prefer_make_unique_mand_make_shared_to_direct_use_of_new.md)
 * [item22_when_using_the_pimpl_idiom_define_special_member_functions_in_the_implementation_file.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item22_when_using_the_pimpl_idiom_define_special_member_functions_in_the_implementation_file.md)
 * [item23_understand_move_and_forward.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item23_understand_move_and_forward.md)
+* [item24_distinguish_universal_references_from_rvalue_references.md](https://github.com/tuyy/TIL/blob/master/effective_modern_cpp/item24_distinguish_universal_references_from_rvalue_references.md)
 
 #### docker
 * [docker_basic.md](https://github.com/tuyy/TIL/blob/master/docker/docker_basic.md)

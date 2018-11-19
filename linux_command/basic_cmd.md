@@ -29,3 +29,6 @@ date -d '20150704' +%s
 
 #### sed
 ```sed ’s/bad/happy/g’ inputfile ```
+
+#### free
+```free | grep Mem | awk '{print $3/$2 * 100.0}'```

@@ -33,5 +33,8 @@ date -d '20150704' +%s
 #### free
 ```free | grep Mem | awk '{print $3/$2 * 100.0}'```
 
-### 포르세스별 메모리 사용량 
+### 프로세스별 메모리 사용량 
 ```ps -eo user,pid,pmem,pcpu,time,cmd --sort -rss | head -n 11```
+
+### running process info with detail time
+```ps -eo pid,lstart,cmd|grep parser```

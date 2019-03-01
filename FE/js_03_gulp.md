@@ -51,3 +51,4 @@ taeunui-MacBook-Pro:yeoman_basic_test tuyy$ gulp --tasks
 
 ### 참고
 * https://gulpjs.com/docs/en/getting-started/quick-start
+* https://css-tricks.com/gulp-for-beginners/

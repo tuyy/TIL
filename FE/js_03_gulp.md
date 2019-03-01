@@ -7,6 +7,7 @@
 ```
 npm install init
 npm install gulp --save-dev
+npm install gulp-sass --save-dev // plugin
 
 // gulpfile.js 추가
 gulp --tasks

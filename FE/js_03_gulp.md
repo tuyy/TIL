@@ -6,7 +6,7 @@
 * 기본 예시
 ```
 npm install init
-npm install gulp
+npm install gulp --save-dev
 
 // gulpfile.js 추가
 gulp --tasks

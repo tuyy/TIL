@@ -49,7 +49,5 @@ taeunui-MacBook-Pro:yeoman_basic_test tuyy$ gulp --tasks
 [11:02:14]     └── css
 ```
 
-#### Async Completion
-```
-TODO
-```
+### 참고
+* https://gulpjs.com/docs/en/getting-started/quick-start

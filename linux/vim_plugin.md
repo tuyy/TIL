@@ -25,28 +25,27 @@ filetype plugin indent on    " required
 
 * 예시
 ```
-  1 set nocompatible
-  2 filetype off
-  3
-  4 set rtp+=~/.vim/bundle/Vundle.vim
-  5 call vundle#begin()
-  6
-  7 " vim 파일 트리
-  8 Plugin 'scrooloose/nerdtree'
-  9 Plugin 'Xuyuanp/nerdtree-git-plugin'
- 10
- 11 " 문법체크
- 12 Plugin 'scrooloose/syntastic'
- 13
- 14 " 코드 자동완성
- 15 Plugin 'valloric/youcompleteme'
- 16
- 17 call vundle#end()
- 18 filetype plugin indent on
- 19
- 20 " Syntastic
- 21 let g:syntastic_cpp_compiler = "g++"
- 22 let g:syntastic_cpp_compiler_options = "-std=c++17 -Wall -Wextra -Wpedantic"
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" vim 파일 트리
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+
+" airline
+Plugin 'vim-airline/vim-airline'
+
+" vim-cpp-enhanced-highlight
+Plugin 'octol/vim-cpp-enhanced-highlight'
+
+" tagbar
+Plugin 'majutsushi/tagbar'
+
+call vundle#end()
+filetype plugin indent on
  ```
 
 * https://vimawesome.com/ 에서 플러그인을 골라 vundle#begin() .. end() 사이에 놓는다.

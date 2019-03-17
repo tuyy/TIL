@@ -54,6 +54,7 @@
 * [clock.md](https://github.com/tuyy/TIL/blob/master/linux/clock.md)
 * [bazel_buildtool.md](https://github.com/tuyy/TIL/blob/master/linux/bazel_buildtool.md)
 * [autotools.md](https://github.com/tuyy/TIL/blob/master/linux/autotools.md)
+* [vim_plugin.md](https://github.com/tuyy/TIL/blob/master/linux/vim_plugin.md)
 
 #### linux_command
 * [basic_cmd.md](https://github.com/tuyy/TIL/blob/master/linux_command/basic_cmd.md)

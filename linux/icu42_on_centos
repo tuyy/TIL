@@ -1,0 +1,8 @@
+```
+wget http://www6.atomicorp.com/channels/atomic/centos/5/x86_64/RPMS/libicu42-devel-4.2.1-2.el5.art.x86_64.rpm
+wget http://www6.atomicorp.com/channels/atomic/centos/5/x86_64/RPMS/libicu42-4.2.1-2.el5.art.x86_64.rpm
+sudo yum install libicu42-*.rpm
+
+sudo ln -s /usr/lib64/libicui18n.so.42 /usr/lib64/libicui18n.so
+sudo ln -s /usr/lib64/libicuuc.so.42.1 /usr/lib64/libicuuc.so
+```

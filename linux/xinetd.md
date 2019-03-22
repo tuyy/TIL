@@ -1,4 +1,4 @@
-### 슈퍼데몬 xinet 설정법 (testsynap )
+### 슈퍼데몬 xinet 설정법 (testsynap 예시)
 1. sudo vi  /etc/xinetd.d/testsynap 파일 추가
     * 서버 경로가 아래 있어야한다.
 ```

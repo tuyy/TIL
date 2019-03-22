@@ -25,5 +25,5 @@ testsynap       27901/udp               # testsynap
 
 3. xindetd 재시작
 ```
-$ /etc/rc.d/init.d/xinetd restart
+$ sudo /etc/rc.d/init.d/xinetd restart
 ```

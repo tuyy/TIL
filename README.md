@@ -33,6 +33,7 @@
 * [vim_plugin.md](https://github.com/tuyy/TIL/blob/master/linux/vim_plugin.md)
 * [vim8_install_on_centos6.md](https://github.com/tuyy/TIL/blob/master/linux/vim8_install_on_centos6.md)
 * [xinetd.md](https://github.com/tuyy/TIL/blob/master/linux/xinetd.md)
+* [auto_input_ssh_script.md](https://github.com/tuyy/TIL/blob/master/linux/auto_input_ssh_script.md)
 
 #### linux_command
 * [basic_cmd.md](https://github.com/tuyy/TIL/blob/master/linux_command/basic_cmd.md)

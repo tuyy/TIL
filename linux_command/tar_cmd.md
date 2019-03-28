@@ -22,3 +22,10 @@
 
 * bz2. 압축풀기
 ```tar -xvjf filename.tar.bz2```
+
+#### tgz
+* tgz 압축
+```tar cvzpf A.tgz shop```
+
+* tgz 압축풀기 
+```tar -xvf A.tgz```

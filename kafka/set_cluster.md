@@ -36,5 +36,5 @@ $ ./bin/zookeeper-server-start.sh -daemon config/zookeeper.properties
 $ ./bin/kafka-server-start.sh -daemon config/server.properties
 
 # 토픽 생성
-$ ./bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 3 --partitions
+$ ./bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 3 --partitions 3 --topic mytest1
 ```

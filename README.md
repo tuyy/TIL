@@ -38,6 +38,7 @@
 #### linux_command
 * [basic_cmd.md](https://github.com/tuyy/TIL/blob/master/linux_command/basic_cmd.md)
 * [tar_cmd.md](https://github.com/tuyy/TIL/blob/master/linux_command/tar_cmd.md)
+* [thread_count.md](https://github.com/tuyy/TIL/blob/master/linux_command/thread_count.md)
 
 #### python
 * [GIL.md](https://github.com/tuyy/TIL/blob/master/python/GIL.md)

@@ -19,3 +19,5 @@ send "$password\r";
 interact
 
 ```
+
+* https://stackoverflow.com/questions/12202587/automatically-enter-ssh-password-with-script

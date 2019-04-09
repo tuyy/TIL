@@ -6,7 +6,7 @@ alias dgw='exp {pwd} ssh yabi1004@dgw01.nnsystem.com'
 
 
 # exp 실행파일 pass 지정해야함
-!/usr/bin/expect
+#!/usr/bin/expect
 
 set timeout 20
 
@@ -14,7 +14,7 @@ set cmd [lrange $argv 1 end]
 set password [lindex $argv 0]
 
 eval spawn $cmd
-expect "password:"
+expect "assword:"
 send "$password\r";
 interact
 

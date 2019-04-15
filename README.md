@@ -61,6 +61,7 @@
 
 #### kafka
 * [simple.md](https://github.com/tuyy/TIL/blob/master/kafka/simple.md)
+* [set_cluster.md](https://github.com/tuyy/TIL/blob/master/kafka/set_cluster.md)
 
 #### FE
 * [atom_package.md](https://github.com/tuyy/TIL/blob/master/FE/atom_package.md)

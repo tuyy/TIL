@@ -43,6 +43,7 @@
 #### python
 * [GIL.md](https://github.com/tuyy/TIL/blob/master/python/GIL.md)
 * [python2_pip_install.md](https://github.com/tuyy/TIL/blob/master/python/python2_pip_install.md)
+* [functional_ex1.md](https://github.com/tuyy/TIL/blob/master/python/functional_ex1.md)
 
 #### web
 * [http2.md](https://github.com/tuyy/TIL/blob/master/web/http2.md)

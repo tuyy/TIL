@@ -81,3 +81,4 @@
 
 #### git
 * [git_ssh.md](https://github.com/tuyy/TIL/blob/master/git/git_ssh.md)
+* [change_commit_author.md](https://github.com/tuyy/TIL/blob/master/git/change_commit_author.md)

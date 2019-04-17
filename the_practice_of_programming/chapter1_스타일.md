@@ -193,3 +193,79 @@ if (val & 1)
 else
     bit = 0;
 ```
+
+### 일관성과 관용 표현
+
+#### 들여쓰기와 중괄호 {}를 쓰는 스타일에서는 일관성을 지켜라
+#### 일관성을 위해 관용 표현을 사용하라
+```C++
+// 나쁜예
+i = 0;
+while (i <= n-1)
+    array[i++] = 1.0
+
+// 개선
+for (i = 0; i < n; i++)
+    array[i] = 1.0;
+    
+// 나쁜예
+do {
+    c = getchar();
+    putchar(c);
+} while (c != EOF);
+
+// 개선 : do-while 은 반드시 한번은 실행되어야할때만 쓰자!
+while ((c = getchar()) != EOF)
+    putchar(c);
+```
+
+#### 다중결정이 필요할 때는 else-if를 사용하라
+* 항상 명료한 코드 depth를 고민하자
+* 각각의 조건문과 그 조건문에서 유발되는 동작들은 가능한 한 가까이 붙여서 써야 하는 것이 원칙이다.
+```C++
+// 나쁜예
+switch (c) {
+case '-':
+    sign = -1;
+    /* fall through */
+case '+':
+    c = getchar();
+    break;
+   
+case '.':
+    break;
+default:
+    break;
+}
+
+// 개선 : 상황에 맞게 switch와 if-else문을 사용하라
+if (c == '-') {
+    // ..
+} else if (..) {
+    // ..
+} else {
+    // ..
+}
+
+```
+
+#### 연습
+``` C++
+// AS-IS
+if (retval != SUCCESS)
+{
+    return (retval);
+}
+
+return SUCCESS;
+
+
+// TO-BE
+return retval;
+```
+
+### 1.4 매크로 함수
+* 요즘 같은 시대엔 매크로 함수는 득보다 실이 더 많다.
+
+#### 매크로 함수를 멀리하라
+// TODO

@@ -12,9 +12,6 @@
 * [make_shared.md](https://github.com/tuyy/TIL/blob/master/cpp/make_shared.md)
 * [weak_ptr.md](https://github.com/tuyy/TIL/blob/master/cpp/weak_ptr.md)
 
-#### Effective Modern C++
-* [effective_modern_cpp](https://github.com/tuyy/TIL/tree/master/effective_modern_cpp)
-
 #### docker
 * [docker_basic.md](https://github.com/tuyy/TIL/blob/master/docker/docker_basic.md)
 
@@ -82,3 +79,8 @@
 #### git
 * [git_ssh.md](https://github.com/tuyy/TIL/blob/master/git/git_ssh.md)
 * [change_commit_author.md](https://github.com/tuyy/TIL/blob/master/git/change_commit_author.md)
+
+#### 책 정리
+* [effective_modern_cpp](https://github.com/tuyy/TIL/tree/master/effective_modern_cpp)
+* [the_practice_of_programming](https://github.com/tuyy/TIL/tree/master/the_practice_of_programming)
+* [Learning_c++_functional_programming](https://github.com/tuyy/TIL/tree/master/Learning_c%2B%2B_functional_programming)

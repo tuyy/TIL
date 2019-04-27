@@ -11,6 +11,8 @@
 * [variable_argument.md](https://github.com/tuyy/TIL/blob/master/cpp/variable_argument.md)
 * [make_shared.md](https://github.com/tuyy/TIL/blob/master/cpp/make_shared.md)
 * [weak_ptr.md](https://github.com/tuyy/TIL/blob/master/cpp/weak_ptr.md)
+* [makeString.md](https://github.com/tuyy/TIL/blob/master/cpp/makeString.md)
+* [buffer.md](https://github.com/tuyy/TIL/blob/master/cpp/buffer.md)
 
 #### docker
 * [docker_basic.md](https://github.com/tuyy/TIL/blob/master/docker/docker_basic.md)

@@ -35,6 +35,7 @@
 * [auto_input_ssh_script.md](https://github.com/tuyy/TIL/blob/master/linux/auto_input_ssh_script.md)
 * [exp.md](https://github.com/tuyy/TIL/blob/be2c07ae9e9b885e1a4bf2dba3d8ac4079627a83/linux/exp.md)
 * [thread_count.md](https://github.com/tuyy/TIL/blob/1801a2462316585a1aa76e54e238c8a92a987cd6/linux_command/thread_count.md)
+* [gdb.md](https://github.com/tuyy/TIL/blob/master/linux/gdb.md)
 
 #### linux_command
 * [basic_cmd.md](https://github.com/tuyy/TIL/blob/master/linux_command/basic_cmd.md)

@@ -41,7 +41,7 @@ std::for_each(sVec.cbegin(), sVec.cend(), [](auto &v){ v.join(); });
 * 사용 가능한 멤버 함수가 매우 직관적이다.
     * public 멤버 함수: join(), detach(), joinable(), operator=(&&), swap(), get_id()
 
-* example
+* example1
 ```C++
 #include <iostream>
 #include <vector>
@@ -87,4 +87,124 @@ auto main() -> int32_t
     return 0;
 }
 
+```
+
+* example2 with class
+```C++
+#include <iostream>
+#include <thread>
+
+class Runnable
+{
+public:
+    Runnable()
+        : mThread()
+    {
+    }
+
+    virtual ~Runnable() = default;
+
+    virtual void run() = 0;
+
+    void join()
+    {
+        if (mThread.joinable() == true)
+        {
+            mThread.join();
+        }
+    }
+
+    void start()
+    {
+        mThread = std::thread(&Runnable::run, this);
+    }
+
+private:
+    std::thread mThread;
+};
+
+
+class MyTest1 : public Runnable
+{
+public:
+    MyTest1(const int32_t aVal)
+        : mVal(aVal)
+    {
+    }
+
+    ~MyTest1() = default;
+
+    void run() override
+    {
+        for (size_t i = 0; i < 5; ++i)
+        {
+            std::cout << "mVal:" << mVal << std::endl;
+
+            std::this_thread::sleep_for(std::chrono::milliseconds(300));
+        }
+
+    }
+
+private:
+    int32_t mVal;
+};
+
+class MyTest2
+{
+public:
+    MyTest2(const int32_t aVal)
+        : mVal(aVal)
+    {
+    }
+
+    int32_t getVal() const
+    {
+        return mVal;
+    }
+    
+    void foo(const int32_t aVal) const
+    {
+        for (size_t i = 0; i < 5; ++i)
+        {
+            std::cout << "mVal:" << mVal << " aVal:" << aVal << std::endl;
+            std::this_thread::sleep_for(std::chrono::milliseconds(300));
+        }
+    }
+
+private:
+    int32_t mVal;
+};
+
+auto main() -> int32_t
+{
+    std::cout << "Start main()" << std::endl;
+
+    MyTest1 sTest1(30);
+    sTest1.start();
+    sTest1.join();
+
+    std::cout << "=============================" << std::endl;
+
+    MyTest2 sTest2(20);
+    std::thread sT2(&MyTest2::foo, &sTest2, 10);
+    sT2.join();
+
+    return 0;
+}
+```
+
+```
+[irteam@dev-tuyy-ncl 023_thread_ex]$ g++ -std=c++17 -g -lpthread -o class class.cpp;./class
+Start main()
+mVal:30
+mVal:30
+mVal:30
+mVal:30
+mVal:30
+=============================
+mVal:20 aVal:10
+mVal:20 aVal:10
+mVal:20 aVal:10
+mVal:20 aVal:10
+mVal:20 aVal:10
 ```

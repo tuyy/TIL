@@ -83,6 +83,9 @@
 * [js_07_pm2.md](https://github.com/tuyy/TIL/blob/master/FE/js_07_pm2.md)
 * [js_08_babel.md](https://github.com/tuyy/TIL/blob/master/FE/js_08_babel.md)
 
+#### go
+* [simple_install_scribe.md](https://github.com/tuyy/TIL/blob/master/go/simple_install_scribe.md)
+
 #### git
 * [git_ssh.md](https://github.com/tuyy/TIL/blob/master/git/git_ssh.md)
 * [change_commit_author.md](https://github.com/tuyy/TIL/blob/master/git/change_commit_author.md)

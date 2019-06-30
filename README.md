@@ -85,6 +85,7 @@
 
 #### go
 * [simple_install_scribe.md](https://github.com/tuyy/TIL/blob/master/go/simple_install_scribe.md)
+* [go_dep.md](https://github.com/tuyy/TIL/blob/master/go/go_dep.md)
 
 #### git
 * [git_ssh.md](https://github.com/tuyy/TIL/blob/master/git/git_ssh.md)

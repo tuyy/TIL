@@ -37,4 +37,15 @@ $ ./bin/kafka-server-start.sh -daemon config/server.properties
 
 # 토픽 생성
 $ ./bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 3 --partitions 3 --topic mytest1
+
+# producer
+$ bin/kafka-console-producer.sh --broker-list localhost:9092 --topic mytest1
+This is a message
+This is another message
+
+# consumer
+$ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic mytest1 --from-beginning
+This is a message
+This is another message
+
 ```

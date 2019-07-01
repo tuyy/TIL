@@ -21,6 +21,7 @@
 * [docker_basic.md](https://github.com/tuyy/TIL/blob/master/docker/docker_basic.md)
 
 #### linux
+* [pkg_config.md](https://github.com/tuyy/TIL/blob/master/linux/pkg_config.md)
 * [unix-history.md](https://github.com/tuyy/TIL/blob/master/linux/unix-history.md)
 * [linux_process_func.md](https://github.com/tuyy/TIL/blob/master/linux/linux_process_func.md)
 * [memory_overcommit.md](https://github.com/tuyy/TIL/blob/master/linux/memory_over_commit.md)

@@ -34,3 +34,5 @@ add_executable(runTestHelloWorld ${TESTS})
 target_link_libraries(runTestHelloWorld gtest gtest_main)
 target_link_libraries(runTestHelloWorld gmock gmock_main)
 ```
+
+* [cmake 관련 괜찮은 한글 블로그 링크](https://www.tuwlab.com/27260)

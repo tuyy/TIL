@@ -4,12 +4,14 @@
 
 #### Toy project list
 * [tutil](https://github.com/tuyy/tutil) : simple util project
-* [C++17 Thread Pool 구현](https://github.com/tuyy/CodingStudy003)
+* [Thread Pool](https://github.com/tuyy/CodingStudy003) : C++17로 Thread Pool 구현
 
 #### Coding Study
 * [001) effective_modern_cpp](https://github.com/tuyy/TIL/tree/master/effective_modern_cpp)
 * [002) 프로그래밍 패턴](https://github.com/tuyy/CodingStudy001)
 * [003) 모던C++로 배우는 동시성 프로그래밍](https://github.com/tuyy/CodingStudy002)
+* [004) GoF의 디자인 패턴](https://github.com/tuyy/TIL/issues/7)
+* [005) 테스트 주도개발 TDD 실천법과 도구](https://github.com/tuyy/TIL/issues/3)
 
 #### cpp
 * [any.md](https://github.com/tuyy/TIL/blob/master/cpp/any.md)

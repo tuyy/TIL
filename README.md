@@ -95,6 +95,6 @@
 * [md_fold.md](https://github.com/tuyy/TIL/blob/master/git/md_fold.md)
 
 #### 책 정리
-* [effective_modern_cpp](https://github.com/tuyy/TIL/tree/master/effective_modern_cpp)
-* [the_practice_of_programming](https://github.com/tuyy/TIL/tree/master/the_practice_of_programming)
-* [Learning_c++_functional_programming](https://github.com/tuyy/TIL/tree/master/Learning_c%2B%2B_functional_programming)
+* [001)effective_modern_cpp](https://github.com/tuyy/TIL/tree/master/effective_modern_cpp)
+* [002)프로그래밍 패턴](https://github.com/tuyy/CodingStudy001)
+* [003)모던C++로 배우는 동시성 프로그래밍](https://github.com/tuyy/CodingStudy002)

@@ -13,6 +13,9 @@
 * [004) GoF의 디자인 패턴](https://github.com/tuyy/TIL/issues/7)
 * [005) 테스트 주도개발 TDD 실천법과 도구](https://github.com/tuyy/TIL/issues/3)
 
+#### editor
+* [clion_keymap.md](https://github.com/tuyy/TIL/blob/master/editor/clion_keymap.md)
+
 #### cpp
 * [any.md](https://github.com/tuyy/TIL/blob/master/cpp/any.md)
 * [shared_mutex_ex.md](https://github.com/tuyy/TIL/blob/master/cpp/shared_mutex_ex.md)

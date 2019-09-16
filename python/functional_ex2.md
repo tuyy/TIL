@@ -9,32 +9,63 @@ def curry(f):
     return curried
 
 
-def _map(f, it):
+# 즉시평가 map
+def i_map(f, it):
+    rz = []
+    for a in it:
+        rz.append(f(a))
+    return rz
+
+i_map = curry(i_map)
+
+
+def map(f, it):
     for a in it:
         yield f(a)
 
+map = curry(map)
 
-def _filter(f, it):
+
+def filter(f, it):
     for a in it:
         if f(a):
             yield a
 
+filter = curry(filter)
 
-def _reject(f, it):
+
+def reject(f, it):
     return filter(lambda a: not f(a), it)
-    
-    
+
+reject = curry(reject)
+
+
 # length 만큼만 반환
-def _take(length, it):
+def take(length, it):
     for a in it:
         yield a
         length -= 1
         if length == 0:
             break
 
+take = curry(take)
+
+
+# 즉시평가 take
+def i_take(length, it):
+    rz = []
+    for a in it:
+        rz.append(a)
+        length -= 1
+        if length == 0:
+            break
+    return rz
+
+i_take = curry(i_take)
+
 
 # reduce
-def _reduce(f, acc, it=None):
+def reduce(f, acc, it=None):
     if it is None:
         it = iter(acc)
         acc = next(it)
@@ -43,12 +74,14 @@ def _reduce(f, acc, it=None):
         acc = f(acc, a)
     return acc
 
+reduce = curry(reduce)
 
 # iter 값 하나씩 효과 주기
-def _each(f, it):
+def each(f, it):
     for a in it:
         f(a)
 
+each = curry(each)
 
 def is_iterable(it):
     try:
@@ -68,13 +101,16 @@ def flat(it):
             yield a
 
 
-# curried function
-filter = curry(_filter)
-reject = curry(_reject)
-map = curry(_map)
-reduce = curry(_reduce)
-take = curry(_take)
-each = curry(_each)
+# 즉시평가 flat
+def i_flat(it):
+    rz = []
+    for a in it:
+        if is_iterable(a):
+            for b in a:
+                rz.append(b)
+        else:
+            rz.append(a)
+    return rz
 
 
 def go(*args):
@@ -122,12 +158,12 @@ def values(obj):
         yield obj[k]
 
 
-# entries [[k1, v1], [k2, v2]]
+# entries {k1:v1, k2:v2} to [[k1, v1], [k2, v2]]
 def entries(obj):
     for k in obj:
         yield [k, obj[k]]
-        
-        
+
+
 def add_dict(a, b):
     a.update(b)
     return a
@@ -153,12 +189,82 @@ def map_object(f, obj):
 # pick 첫 번째 인자로 받은 키 값의 value를 반환
 # pick(['b', 'c'], {'a':1, 'b':2, 'c':3, 'd':4})
 # {'b': 2, 'c': 3}
-
-
 def pick(keys, obj):
     return go(obj,
               entries,
               filter(lambda v: v[0] in keys),
               take(len(keys)),
               object)
+
+
+# uniq [1, 1, 2, 2, 3] to [1, 2, 3]
+def uniq(it):
+    tmp = []
+    for a in it:
+        if a not in tmp:
+            tmp.append(a)
+            yield a
+
+
+# count [1, 1, 2, 2, 3] to [[1, 2], [2, 2], [3, 1]]
+def count(it):
+    for i in uniq(it):
+        cnt = 0
+        for j in it:
+            if i == j:
+                cnt += 1
+        yield [i, cnt]
+
+
+def _count_by(f, it):
+    cnt = 0
+    for v in it:
+        if f(v):
+            cnt += 1
+    return cnt
+
+count_by = curry(_count_by)
+
+
+# sort_by [[3, 2], [1, 4]] to [[1, 4], [3, 2]]
+sort_by = curry(lambda f,it: sorted(it, key=f))
+sort_reverse_by = curry(lambda f,it: sorted(it, key=f, reverse=True))
+
+
+# index_by [{'id':1, 'val':10 }, {'id':2, 'val':20}] to [1:{..}, 2:{..}]
+def _index_by(f, it):
+    return reduce(lambda obj,a: add_dict(obj, {f(a): a}), {}, it)
+
+index_by = curry(_index_by)
+
+
+# group_by [{'id':1, 'val':10 }, {'id':2, 'val':20}] to [1:{..}, 2:{..}]
+def _group_by(f, it):
+    def _push(p, k, v):
+        if k in p:
+            p[k].append(v)
+        else:
+            p[k] = [v]
+        return p
+
+    return reduce(lambda group,a: _push(group, f(a), a), {}, it)
+
+group_by = curry(_group_by)
+
+
+def is_uniq(it):
+    return len(list(it)) == len(set(it))
+
+
+def reverse(it):
+    rz = list(it)
+    rz.reverse()
+    return rz
+
+
+def find(f, it):
+    for v in it:
+        if f(v):
+            return v
+
 ```

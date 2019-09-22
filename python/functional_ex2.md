@@ -27,6 +27,7 @@ def curry(f):
 
 
 # 즉시평가 map
+@curry
 def i_map(f, it):
     args_cnt = len(inspect.signature(f).parameters)
     if args_cnt > 2 or args_cnt == 0:
@@ -42,9 +43,8 @@ def i_map(f, it):
             rz.append(f(v))
     return rz
 
-i_map = curry(i_map)
 
-
+@curry
 def map(f, it):
     args_cnt = len(inspect.signature(f).parameters)
     if args_cnt > 2 or args_cnt == 0:
@@ -58,9 +58,8 @@ def map(f, it):
         else:
             yield f(v)
 
-map = curry(map)
 
-
+@curry
 def i_filter(f, it):
     args_cnt = len(inspect.signature(f).parameters)
     if args_cnt > 2 or args_cnt == 0:
@@ -78,8 +77,8 @@ def i_filter(f, it):
                 rz.append(a)
     return rz
 
-i_filter = curry(i_filter)
 
+@curry
 def filter(f, it):
     args_cnt = len(inspect.signature(f).parameters)
     if args_cnt > 2 or args_cnt == 0:
@@ -95,9 +94,8 @@ def filter(f, it):
             if f(a):
                 yield a
 
-filter = curry(filter)
 
-
+@curry
 def reject(f, it):
     args_cnt = len(inspect.signature(f).parameters)
     if args_cnt > 2 or args_cnt == 0:
@@ -108,10 +106,9 @@ def reject(f, it):
     else:
         return filter(lambda a: not f(a), it)
 
-reject = curry(reject)
-
 
 # length 만큼만 반환
+@curry
 def take(length, it):
     for a in it:
         yield a
@@ -119,10 +116,9 @@ def take(length, it):
         if length == 0:
             break
 
-take = curry(take)
-
 
 # 즉시평가 take
+@curry
 def i_take(length, it):
     rz = []
     for a in it:
@@ -132,24 +128,20 @@ def i_take(length, it):
             break
     return rz
 
-i_take = curry(i_take)
-
 
 # reduce
+@curry
 def reduce(f, acc, it):
     for a in it:
         acc = f(acc, a)
     return acc
 
-reduce = curry(reduce)
-
 
 # iter 값 하나씩 효과 주기
+@curry
 def each(f, it):
     for a in it:
         f(a)
-
-each = curry(each)
 
 
 def is_iterable(it):
@@ -286,14 +278,13 @@ def count(it):
         yield [i, cnt]
 
 
+@curry
 def count_by(f, it):
     cnt = 0
     for v in it:
         if f(v):
             cnt += 1
     return cnt
-
-count_by = curry(count_by)
 
 
 # sort_by [[3, 2], [1, 4]] => [[1, 4], [3, 2]]
@@ -302,13 +293,13 @@ sort_reverse_by = curry(lambda f,it: sorted(it, key=f, reverse=True))
 
 
 # index_by [{'id':1, 'val':10 }, {'id':2, 'val':20}] => [1:{..}, 2:{..}]
+@curry
 def index_by(f, it):
     return reduce(lambda obj,a: add_dict(obj, {f(a): a}), {}, it)
 
-index_by = curry(index_by)
-
 
 # group_by [{'id':1, 'val':10 }, {'id':2, 'val':20}] => [1:{..}, 2:{..}]
+@curry
 def group_by(f, it):
     def _push(p, k, v):
         if k in p:
@@ -318,8 +309,6 @@ def group_by(f, it):
         return p
 
     return reduce(lambda group,a: _push(group, f(a), a), {}, it)
-
-group_by = curry(group_by)
 
 
 def is_uniq(it):

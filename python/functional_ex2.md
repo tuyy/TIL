@@ -2,6 +2,14 @@
 ```python3
 import inspect
 
+def is_number(i):
+    try:
+        int(i)
+        return True
+    except Exception:
+        return False
+
+
 def curry(f):
     args_cnt = len(inspect.signature(f).parameters)
     def curried(a, *args):
@@ -12,7 +20,7 @@ def curry(f):
         if args_cnt == 3:
             # reduce 용 curry. 인자 2개일때와 2개 커리하는 경우 처리
             if len(args) == 1:
-                if args[0] == [] or args[0] == {}:
+                if args[0] == [] or args[0] == {} or is_number(args[0]):
                     return lambda it: f(a, args[0], it)
                 else:
                     it = iter(args[0])
@@ -22,7 +30,7 @@ def curry(f):
         else:
             # 함수의 인수가 2개일때
             return lambda *args : f(a, *args)
-            
+
     return curried
 
 

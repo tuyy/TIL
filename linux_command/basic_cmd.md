@@ -1,5 +1,6 @@
 #### ls
 ```ls -la --time-style=full-iso```
+```ll -h | grep 'Jan 22' |awk '{system("mv "$9" sogb")}'```
 
 #### date
 ```

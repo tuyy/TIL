@@ -180,7 +180,7 @@ DLIBS := -lpthread \
 
 SLIBS := $(CARBON_DIR)/lib/libcarbon.a
 
-CPPFLAGS=-O2 -Wall -Werror -std=c++17 -g $(INC_DIR_OPTION) $(LI_DIR_OPTION) $(DLIBS) $(SLIBS)
+CPPFLAGS=-O2 -Wall -Werror -std=c++17 -g $(INC_DIR_OPTION) $(LIB_DIR_OPTION) $(DLIBS) $(SLIBS)
 
 TARGET=main
 

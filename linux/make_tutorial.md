@@ -121,7 +121,7 @@ CPPFLAGS=-O2 -Wall -Werror -std=c++14 $(INC_DIR_OPTION)
 TARGET=test
 
 $(TARGET) : $(OBJS)
-    $(CXX) -o $@ $(CXXFLAGS) $(OBJS)
+    $(CXX) -o $@ $(CPPFLAGS) $(OBJS)
 
 clean :
     $(RM) $(OBJS) $(TARGET)
@@ -151,4 +151,42 @@ check : $(TARGET)
 clean :
     $(RM) $(OBJS) $(TARGET)
 
+```
+
+#### 9. example
+```
+.SUFFIXES : .cpp .o
+
+CXX=g++
+CUR_DIR:=$(shell pwd)
+EXT_DIR      := $(CUR_DIR)/externals
+CARBON_DIR   := $(EXT_DIR)/carbon
+BOOST_DIR    := $(EXT_DIR)/boost
+
+INC_DIR=$(CUR_DIR)/include
+INC_DIRS=$(realpath $(INC_DIR)) $(realpath $(CARBON_DIR)/include) $(realpath $(BOOST_DIR)/include)
+INC_DIR_OPTION=$(addprefix -isystem, $(INC_DIRS)) $(addprefix -I, $(INC_DIRS))
+
+SRC_LIST:=$(sort $(shell find -L src -name '*.cpp'))
+SRCS:= $(SRC_LIST:./%=%)
+OBJS=$(SRCS:.cpp=.o)
+
+LIB_DIR_OPTION := -L$(BOOST_DIR)/lib
+
+DLIBS := -lpthread \
+         -lboost_system \
+         -lcrypto \
+         -lssl
+
+SLIBS := $(CARBON_DIR)/lib/libcarbon.a
+
+CPPFLAGS=-O2 -Wall -Werror -std=c++17 -g $(INC_DIR_OPTION) $(LI_DIR_OPTION) $(DLIBS) $(SLIBS)
+
+TARGET=main
+
+$(TARGET) : $(OBJS)
+    $(CXX) -o $@ $(CPPFLAGS) $(OBJS)
+
+clean :
+    $(RM) $(OBJS) $(TARGET)
 ```

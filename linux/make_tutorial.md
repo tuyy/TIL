@@ -158,34 +158,43 @@ clean :
 .SUFFIXES : .cpp .o
 
 CXX=g++
-CUR_DIR:=$(shell pwd)
+CUR_DIR      := $(shell pwd)
 EXT_DIR      := $(CUR_DIR)/externals
 CARBON_DIR   := $(EXT_DIR)/carbon
 BOOST_DIR    := $(EXT_DIR)/boost
 
 INC_DIR=$(CUR_DIR)/include
 INC_DIRS=$(realpath $(INC_DIR)) $(realpath $(CARBON_DIR)/include) $(realpath $(BOOST_DIR)/include)
-INC_DIR_OPTION=$(addprefix -isystem, $(INC_DIRS)) $(addprefix -I, $(INC_DIRS))
+INC_DIR_OPTION=$(addprefix -I, $(INC_DIRS)) $(addprefix -isystem, $(INC_DIRS))
 
 SRC_LIST:=$(sort $(shell find -L src -name '*.cpp'))
 SRCS:= $(SRC_LIST:./%=%)
 OBJS=$(SRCS:.cpp=.o)
 
+CXXFLAGS := --std=c++17 -O0 -g -Wall -Werror -fpic -Wno-non-virtual-dtor $(INC_DIR_OPTION) -pthread
+
 LIB_DIR_OPTION := -L$(BOOST_DIR)/lib
 
 DLIBS := -lpthread \
          -lboost_system \
+         -lboost_serialization \
+         -lboost_thread \
+         -lboost_chrono \
+         -lboost_filesystem \
+         -lboost_iostreams \
+         -lboost_locale \
+         -lboost_regex \
          -lcrypto \
          -lssl
 
 SLIBS := $(CARBON_DIR)/lib/libcarbon.a
 
-CPPFLAGS=-O2 -Wall -Werror -std=c++17 -g $(INC_DIR_OPTION) $(LIB_DIR_OPTION) $(DLIBS) $(SLIBS)
+LDFLAGS := $(LIB_DIR_OPTION) $(DLIBS) -pthread -Wl,--wrap=__cxa_throw
 
 TARGET=main
 
 $(TARGET) : $(OBJS)
-    $(CXX) -o $@ $(CPPFLAGS) $(OBJS)
+    $(CXX) -o $@ $(CPPFLAGS) $(OBJS) $(SLIBS) $(LDFLAGS)
 
 clean :
     $(RM) $(OBJS) $(TARGET)

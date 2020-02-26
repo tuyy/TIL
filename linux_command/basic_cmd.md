@@ -15,7 +15,10 @@ date -d '20150704' +%s
 ```find / -name libpython2.7.so.1.0 2>/dev/null  // error msg 출력x```
 
 #### awk
-```awk \'{print $2}\’```
+```
+awk \'{print $2}\’
+awk '{sum+=1 num++} END {print "sum=" sum " num=" num}'
+```
 
 #### sort
 ```sort -u -k3 -r```

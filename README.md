@@ -45,6 +45,7 @@
 * [clock.md](https://github.com/tuyy/TIL/blob/master/linux/clock.md)
 * [bazel_buildtool.md](https://github.com/tuyy/TIL/blob/master/linux/bazel_buildtool.md)
 * [autotools.md](https://github.com/tuyy/TIL/blob/master/linux/autotools.md)
+* [vimrc.md](https://github.com/tuyy/TIL/blob/master/linux/vimrc.md)
 * [vim_plugin.md](https://github.com/tuyy/TIL/blob/master/linux/vim_plugin.md)
 * [vim8_install_on_centos6.md](https://github.com/tuyy/TIL/blob/master/linux/vim8_install_on_centos6.md)
 * [xinetd.md](https://github.com/tuyy/TIL/blob/master/linux/xinetd.md)

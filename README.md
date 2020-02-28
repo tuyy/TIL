@@ -33,7 +33,7 @@
 * [make_tutorial.md](https://github.com/tuyy/TIL/blob/master/linux/make_tutorial.md)
 * [vimrc.md](https://github.com/tuyy/TIL/blob/master/linux/vimrc.md)
 
-#### linux_command
+#### command
 * [linux_cmd.md](https://github.com/tuyy/TIL/blob/master/linux_command/linux_cmd.md)
 * [gdb.md](https://github.com/tuyy/TIL/blob/master/linux/gdb.md)
 

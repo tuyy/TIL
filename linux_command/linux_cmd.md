@@ -24,7 +24,11 @@ awk '{sum+=1 num++} END {print "sum=" sum " num=" num}'
 #### sort
 ```sort -u -k3 -r```
 
-#### env
+#### thread count
+```
+$ ps hH p {PID} | wc -l
+$ cat /proc/{PID}/status
+```
 
 #### file
 ```file -i filename.txt```
@@ -38,8 +42,8 @@ awk '{sum+=1 num++} END {print "sum=" sum " num=" num}'
 #### free
 ```free | grep Mem | awk '{print $3/$2 * 100.0}'```
 
-### 프로세스별 메모리 사용량 
+### 프로세스 메모리,CPU 사용량 (Top10)
 ```ps -eo user,pid,pmem,pcpu,time,cmd --sort -rss | head -n 11```
 
-### running process info with detail time
-```ps -eo pid,lstart,cmd|grep parser```
+### 프로세스 시작시간
+```ps -eo pid,lstart,cmd| grep {process}```

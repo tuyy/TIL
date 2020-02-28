@@ -47,3 +47,29 @@ $ cat /proc/{PID}/status
 
 ### 프로세스 시작시간
 ```ps -eo pid,lstart,cmd| grep {process}```
+
+#### tar.gz
+* 압축하기
+```tar cvzf filename.tar.gz download/```
+
+* 압축풀기
+```tar xzvpf filename.tar.gz Download/```
+
+#### tar.bz2
+* bz2. 압축
+```tar -cvjf filename.tar.bz2 Download```
+
+* bz2. 압축풀기
+```tar -xvjf filename.tar.bz2```
+
+#### tgz
+* tgz 압축
+```tar cvzpf A.tgz shop```
+
+* tgz 압축풀기 
+```tar -xvf A.tgz```
+
+### pstack, core 분석
+```pstack {PID}```
+
+```gdb {bin} {core_file}```

@@ -12,7 +12,6 @@
 * [GoF의 디자인 패턴](https://github.com/tuyy/TIL/issues/7)
 * [테스트 주도개발 TDD 실천법과 도구](https://github.com/tuyy/TIL/issues/3)
 
-#### cpp
 <details><summary>CPP</summary>
 <p>
 

@@ -7,6 +7,7 @@
 * [Thread Pool](https://github.com/tuyy/CodingStudy003) : C++17로 Thread Pool 구현
 
 #### Coding Study
+* [Optimized C++](https://github.com/tuyy/optimazed_cpp)
 * [effective_modern_cpp](https://github.com/tuyy/TIL/tree/master/effective_modern_cpp)
 * [모던C++로 배우는 동시성 프로그래밍](https://github.com/tuyy/CodingStudy002)
 * [GoF의 디자인 패턴](https://github.com/tuyy/TIL/issues/7)

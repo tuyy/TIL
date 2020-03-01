@@ -16,6 +16,7 @@
 <details><summary>CPP</summary>
 <p>
 
+* [random.md](https://github.com/tuyy/TIL/blob/master/cpp/random.md)
 * [any.md](https://github.com/tuyy/TIL/blob/master/cpp/any.md)
 * [shared_mutex_ex.md](https://github.com/tuyy/TIL/blob/master/cpp/shared_mutex_ex.md)
 * [variable_argument.md](https://github.com/tuyy/TIL/blob/master/cpp/variable_argument.md)

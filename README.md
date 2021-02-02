@@ -4,6 +4,7 @@
 
 #### Toy project list
 * [tutil](https://github.com/tuyy/tutil) : simple util project for python
+* [logsummary-go](https://github.com/tuyy/logsummary-go) : toy-project-go 001
 
 #### Coding Study
 * [Optimized C++](https://github.com/tuyy/optimazed_cpp)

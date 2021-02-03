@@ -19,6 +19,17 @@ func main() {
 	d1 := t1.Sub(t2) // duration
 	fmt.Printf("d1:%d\n", d1)
 
+    // 시간 비교
+	if t2.After(t1) {
+		fmt.Println("t1 < t2")
+	}
+	if t1.Before(t2) {
+		fmt.Println("t1 < t2")
+	}
+	if t1.Equal(t1) {
+		fmt.Println("t1 == t2")
+	}
+
 	t3 := time.Date(2021, time.February, 1, 7, 30, 10, 1000, time.Local)
 	fmt.Printf("t3:%s\n", t3)
 	fmt.Printf("t3.Unix():%d\n", t3.Unix())
@@ -41,6 +52,9 @@ func main() {
 t1:2021-02-02 23:25:16.088354 +0900 KST m=+0.000094678
 t2:2021-02-02 23:25:26.088354 +0900 KST m=+10.000094678
 d1:-10000000000
+t1 < t2
+t1 < t2
+t1 == t2
 t3:2021-02-01 07:30:10.000001 +0900 KST
 t3.Unix():1612132210
 t3.UnixNano():1612132210000001000

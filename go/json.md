@@ -1,6 +1,6 @@
 ### json
- TODO 작성중
-
+* json Encode, Marshal == struct to json
+*  json Decode, Unmarshal == json to struct
 * https://golang.org/pkg/encoding/json/
 
 ```go
@@ -39,7 +39,7 @@ func (s Status) MarshalJSON() ([]byte, error) {
         return []byte("333"), nil
     default:
         return nil, errors.New("invalid status")
-    }
+}
 }
 
 func (s *Status) UnmarshalJSON(b []byte) error {
@@ -49,6 +49,10 @@ func (s *Status) UnmarshalJSON(b []byte) error {
     }
     *s = Status(no)
     return nil
+}
+
+type Simple struct {
+    Data int
 }
 
 func main() {
@@ -68,12 +72,50 @@ func main() {
         panic(err)
     }
     fmt.Printf("%#v\n", p)
-
-    // TODO json.Encoder, json.Decoder
+    
+    // 직렬화
+    var buf2 bytes.Buffer
+    env := json.NewEncoder(&buf2)
+    err = env.Encode(struct {
+        Name string
+    }{Name: "tuyy"})
+    if err != nil {
+        panic(err)
+    }
+    fmt.Printf("%s\n", buf2.String())
+    
+    // 역직렬화
+    buf3 := bytes.NewBuffer([]byte(`{"Data":111}{"Data":222}{"Data":333}`))
+    dec := json.NewDecoder(buf3)
+    for i := 0; i < 3; i++ {
+        var obj Simple
+        err = dec.Decode(&obj)
+        if err != nil {
+            panic(err)
+        }
+        fmt.Printf("%#v\n", obj)
+    }
+    
+    fmt.Printf("%#v\n", json.Valid([]byte(`{}`))) // true
+    fmt.Printf("%#v\n", json.Valid([]byte(`[123]`))) // true
+    fmt.Printf("%#v\n", json.Valid([]byte(`{123}`))) // false
+    
+    var out bytes.Buffer
+    json.HTMLEscape(&out, []byte(`{"Name":"<b>HTML content</b>"}`))
+    fmt.Fprintln(os.Stdout, out.String())
 }
 
 # Result
-{"name":"tu","Id":"777","status":333,"birthday":"2021-02-04T20:48:20.960014+09:00"}
-{"name":"tu","Id":"777","status":333,"birthday":"2021-02-04T20:48:20.960014+09:00"}
-main.Person{Name:"tu", Age:0, Id:777, Status:333, BirthDay:time.Time{wall:0x3938a6b0, ext:63748036100, loc:(*time.Location)(0x11be480)}}
+{"name":"tu","Id":"777","status":333,"birthday":"2021-02-06T00:30:17.136854+09:00"}
+{"name":"tu","Id":"777","status":333,"birthday":"2021-02-06T00:30:17.136854+09:00"}
+main.Person{Name:"tu", Age:0, Id:777, Status:333, BirthDay:time.Time{wall:0x82839f0, ext:63748135817, loc:(*time.Location)(0x11c2480)}}
+{"Name":"tuyy"}
+
+main.Simple{Data:111}
+main.Simple{Data:222}
+main.Simple{Data:333}
+true
+true
+false
+{"Name":"\u003cb\u003eHTML content\u003c/b\u003e"}
 ```

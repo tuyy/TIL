@@ -5,6 +5,8 @@
 #### Toy project list
 * [tutil](https://github.com/tuyy/tutil) : simple util project for python
 * [logsummary-go](https://github.com/tuyy/logsummary-go) : toy-project-go 001
+* [kafkaReader-go](https://github.com/tuyy/kafkaReader-go) : toy-project-go 002
+
 
 #### Coding Study
 * [Optimized C++](https://github.com/tuyy/optimazed_cpp)

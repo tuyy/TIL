@@ -1,6 +1,6 @@
 ### json
 * json Encode, Marshal == struct to json
-*  json Decode, Unmarshal == json to struct
+* json Decode, Unmarshal == json to struct
 * https://golang.org/pkg/encoding/json/
 
 ```go

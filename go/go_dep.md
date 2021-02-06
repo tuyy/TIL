@@ -1,3 +1,7 @@
+이젠 go dep 보단 go mod (v1.11 부터 지원) 를 사용하자
+
+..
+
 ## go dep
 * 매번 하나씩 go get 으로 의존성을 다루는건 협업할때 매우 번거로워서 ```go dep```을 이용하자
 * ```Gopkg.lock  Gopkg.toml vendor``` 파일&디렉토리가 생긴다. vendor는 .gitignore 하자

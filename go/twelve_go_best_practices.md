@@ -200,4 +200,58 @@ import (
 )
 ```
 
-TODO..
+### document
+go는 언어 level에서 document를 지원한다.
+
+```
+$ go doc ..
+```
+
+```
+// Pacakge tuyy 는 테스트 package 이다.
+package tuyy
+
+import "fmt"
+
+// struct Person은 테스트 struct 이다.
+type Person struct {
+	name string
+}
+
+// func Hello()는 테스트 function 이다.
+func Hello() {
+	fmt.Println("hello world!")
+}
+
+$ go doc ./tuyy
+package tuyy // import "HelloWorld/tuyy"
+
+Pacakge tuyy 는 테스트 package 이다.
+
+func Hello()
+type Person struct{ ... }
+
+```
+
+### Shorter is better!
+* 긴 이름 보다 짧은 이름이 항상 더 좋다.
+* package명은 항상 prefix로 포함되는 것을 잊지말아야한다.
+    * package encoding/json, include json.Encoder(..), not json.JsonEncoder(..)
+
+### 하나의 Package는 많은 파일로 쪼개자
+* Avoid very long files
+* Separate code and tests
+* Test code is compiled only at test time.
+
+### Make your packages "go get"-able
+* cmd pattern, pkg pattern을 사용하자
+
+### Ask for what you need
+* concrete type을 사용하기 보단, interface를 사용해라.
+    * 테스트하기 쉬워진다.
+    
+### Keep independent packages independent
+### Using an interface instead of a concreate type makes testing easier
+### Avoid consurrency in your API
+### Use goroutines to manage state
+### Avoid goroutine leaks

@@ -6,6 +6,7 @@
 * [tutil](https://github.com/tuyy/tutil) : simple util project for python
 * [logsummary-go](https://github.com/tuyy/logsummary-go) : toy-project-go 001
 * [kafkaReader-go](https://github.com/tuyy/kafkaReader-go) : toy-project-go 002
+* [kafkaWriter-go](https://github.com/tuyy/kafkaWriter-go) : toy-project-go 003
 
 
 #### Coding Study

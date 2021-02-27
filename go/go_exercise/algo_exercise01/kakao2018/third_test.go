@@ -1,4 +1,4 @@
-package example1
+package kakao2018
 
 import (
 	"strings"

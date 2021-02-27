@@ -1,4 +1,4 @@
-package etctest
+package dfs_ex
 
 import (
 	"fmt"

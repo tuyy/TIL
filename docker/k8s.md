@@ -1,4 +1,5 @@
 ### k8s 예제
+* https://kubernetes.io/ko/docs/reference/kubectl/cheatsheet/
 
 ### 기본 명령어
 ```

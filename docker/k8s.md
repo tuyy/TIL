@@ -29,5 +29,6 @@ $ kubectl exec -it ${NAME} /bin/bash
 $ kubectl logs -f ${NAME}
 ```
 
-.. TODO
+* 아래 링크에서 계속..
+* https://github.com/tuyy/dockerAndK8sEx
 

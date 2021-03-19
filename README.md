@@ -28,3 +28,5 @@
 * [git_ssh.md](https://github.com/tuyy/TIL/blob/master/git/git_ssh.md)
 * [change_commit_author.md](https://github.com/tuyy/TIL/blob/master/git/change_commit_author.md)
 
+#### web
+* [dev_js_settinig](https://github.com/tuyy/TIL/blob/master/web/FE/init_vanilla_js_with_jest.md)

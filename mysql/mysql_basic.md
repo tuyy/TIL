@@ -106,6 +106,29 @@ DELETE FROM tablename WHERE col2=? ORDER BY... LIMIT 10;
 * 외부조인(Outer Join)
 * 동등, 비동등, 자연, 크로스, 카티션, 셀프 조인 등 있음
 
+```
+JOIN 작성법: 아래 쿼리들 방식의 성능은 동일
+
+## ASNSI 표준 <- 권장
+SELECT f.title, f.id
+FROM film as f
+JOIN film_actor ON f.id = film_actor.id
+WHERE f.title = ?
+
+## where 절에 표시
+SELECT f.title, f.id
+FROM film as f, film_actor
+WHERE f.id = film_actor.id
+AND f.title = ?
+```
+
+##### Nested Loop Join (NL Join)
+* mysql은 8.0 이하 모든 버전에선 NL Join을 사용한다.
+* 순차적으로 처리된다.
+* 먼저 드라이브 되는 선행 테이블의 크기가 적으면 유리하다.(이중 포문으로 생각하자)
+* 인덱스가 모두 사용되는건 아니다.
+* 쿼리 검수 잘 받자..
+
 ##### Inner Join
  두 개 이상의 테이블을 내부 결합
  
@@ -156,4 +179,106 @@ mysql> select book.id, book.author, color.id as color_id, color.name, color.no f
  
 
 ##### Outer Join
- 두 개 이상의 테이블을 외부 결합
+ 두 개 이상의 테이블을 외부 결합, 결과가 없는 경우 null을 반환, left/right join 존재
+ 
+ ```
+ mysql> select book.id, book.author, color.id as color_id, color.name, color.no from book left outer join color on book.id = color.no;
++----+--------+----------+--------+------+
+| id | author | color_id | name   | no   |
++----+--------+----------+--------+------+
+|  1 | tuyy1  |        3 | red003 |    1 |
+|  1 | tuyy1  |        2 | red002 |    1 |
+|  1 | tuyy1  |        1 | red001 |    1 |
+|  2 | tuyy2  |        5 | red005 |    2 |
+|  2 | tuyy2  |        4 | red004 |    2 |
+|  3 | tuyy3  |        7 | red007 |    3 |
+|  3 | tuyy3  |        6 | red006 |    3 |
+|  4 | tuyy4  |     NULL | NULL   | NULL |
+|  5 | tuyy5  |     NULL | NULL   | NULL |
+|  6 | tuyy6  |     NULL | NULL   | NULL |
+|  7 | tuyy7  |     NULL | NULL   | NULL |
+|  8 | tuyy8  |     NULL | NULL   | NULL |
++----+--------+----------+--------+------+
+
+mysql> select book.id, book.author, color.id as color_id, color.name, color.no from book right outer join color on book.id = color.no;
++------+--------+----------+--------+------+
+| id   | author | color_id | name   | no   |
++------+--------+----------+--------+------+
+|    1 | tuyy1  |        1 | red001 |    1 |
+|    1 | tuyy1  |        2 | red002 |    1 |
+|    1 | tuyy1  |        3 | red003 |    1 |
+|    2 | tuyy2  |        4 | red004 |    2 |
+|    2 | tuyy2  |        5 | red005 |    2 |
+|    3 | tuyy3  |        6 | red006 |    3 |
+|    3 | tuyy3  |        7 | red007 |    3 |
++------+--------+----------+--------+------+
+ ```
+
+##### Cross Join
+ 두 개 테이블을 가지고 가능한 모든 조합을 만든다. (잘 안씀)
+
+```
+mysql> select book.id, book.author, color.id as color_id, color.name, color.no from book cross join color on book.id = color.no;
++----+--------+----------+--------+------+
+| id | author | color_id | name   | no   |
++----+--------+----------+--------+------+
+|  1 | tuyy1  |        1 | red001 |    1 |
+|  1 | tuyy1  |        2 | red002 |    1 |
+|  1 | tuyy1  |        3 | red003 |    1 |
+|  2 | tuyy2  |        4 | red004 |    2 |
+|  2 | tuyy2  |        5 | red005 |    2 |
+|  3 | tuyy3  |        6 | red006 |    3 |
+|  3 | tuyy3  |        7 | red007 |    3 |
++----+--------+----------+--------+------+
+```
+
+##### Equi Join
+ 둘은 비교 대상이 아니며 구분 기준이 전혀 다르다.
+
+```
+## inner join
+$ SELECT TS.store_id FROM Goods AS TS INNER JOIN MyGoods AS S ON TS.goods_id > S.goods_id;
+
+## equi join
+$ SELECT TS.store_id FROM Goods AS TS LEFT OUTER JOIN MyGoods AS S ON TS.goods_id = S.goods_id;
+```
+
+#### HINT
+ 쿼리 튜닝의 한 방식, 올바른 실행 계획을 세우도록 명시적으로 옵션을 지정하는 방법이다. 그러나 잘못 쓰면 문제가 있을 수 있음
+ 
+* STRAIGHT_JOIN : 조인 순서 보장하는 힌트
+* USE INDEX (PRIMARY) : 인덱스 사용을 보장하는 힌트
+
+#### UNION & UNION ALL
+ 다른 테이블의 행을 가지고 와서 "행을 늘리는" 집합 연산이다. 두 개 이상의 조회 결과를 합칠 수 있다. (단, 컬럼이 타입까지 모두 동일해야함)
+ 
+```
+# 중복을 제거
+SELECT .. FROM table UNION SELECT ... FROM table2;
+ 
+# 중복을 허용 (SUM, MAX, AVG 연산시 에러 발생하므로 주의)
+SELECT .. FROM table UNION ALL SELECT ... FROM table2;
+```
+
+#### INDEX
+MYSQL의 인덱스는 B-Tree 구조이다. 튜닝의 중요하고 쉬운? 부분이다.
+
+* 인덱스를 건 컬럼 순서가 중요하다.
+
+##### 인덱스를 타지 못하는 경우
+```
+# LIKE '% %'
+SELECT * FROM test WHERE keyword LIKE '%가%';
+
+# 좌변이 가공
+SELECT * FROM emp WHERE SUBSTR(emp_nm,1,1) = 'M';
+
+# 부정연산자를 사용하는 경우
+SELECT * FROM emp WHERE emp_nm != '정인구';
+
+# 암시적인 형변환 (emp_no는 int형인데 조건은 스트링.. 암시적으로 형 변환됨)
+SELECT * FROM emp WHERE emp_no = '11617';
+
+# NULL, NOT NULL (mysql은 is null은 인덱스 활용 가능)
+SELECT * FROM emp WHERE emp_no IS NOT NULL;
+```

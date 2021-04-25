@@ -1,0 +1,67 @@
+basePath: /
+definitions:
+  main.authParam:
+    properties:
+      password:
+        type: string
+      username:
+        type: string
+    type: object
+  main.authResp:
+    properties:
+      token:
+        type: string
+    type: object
+host: localhost:8082
+info:
+  contact:
+    email: x@linggar.asia
+    name: Linggar Primahastoko
+    url: http://linggar.asia
+  description: Simple swagger implementation in Go HTTP
+  title: Go Restful API with Swagger
+  version: "1.0"
+paths:
+  /auth/login:
+    post:
+      consumes:
+      - application/json
+      description: Auth Login
+      operationId: auth-login
+      parameters:
+      - description: Auth Login Input
+        in: body
+        name: authLogin
+        required: true
+        schema:
+          $ref: '#/definitions/main.authParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/main.authResp'
+      summary: Auth Login
+      tags:
+      - auth
+  /hello:
+    get:
+      consumes:
+      - application/json
+      description: hello test
+      operationId: hello-world
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+      summary: hello handler
+      tags:
+      - auth
+securityDefinitions:
+  ApiKeyAuth:
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"

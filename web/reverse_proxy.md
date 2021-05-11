@@ -10,3 +10,6 @@
 
 #### 리버스 프록시 서버 구축
 * apache, nginx 으로 가능
+
+
+<img width="759" alt="스크린샷 2021-05-11 오후 2 41 06" src="https://user-images.githubusercontent.com/13283116/117764177-07f7fb80-b267-11eb-81c0-f7eb3e1fb646.png">

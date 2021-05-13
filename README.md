@@ -23,7 +23,6 @@
 * [make_tutorial.md](https://github.com/tuyy/TIL/blob/master/linux/make_tutorial.md)
 * [linux_cmd.md](https://github.com/tuyy/TIL/blob/master/linux/linux_cmd.md)
 * [vimrc.md](https://github.com/tuyy/TIL/blob/master/linux/vimrc.md)
-
 * [gdb.md](https://github.com/tuyy/TIL/blob/master/linux/gdb.md)
 
 #### git

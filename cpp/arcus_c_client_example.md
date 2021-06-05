@@ -191,5 +191,12 @@ int main(void)
 
 ## 실행
 ### !항상 main 함수를 먼저 쓰자
-g++ -std=c++11 -Wall -g -Ilibarcus/include main.cpp libarcus/lib/libmemcached.a libarcus/lib/libmemcachedutil.a libarcus/lib/libzookeeper_mt.a -pthread -lsasl2 -o main;./main
+$ g++ -std=c++11 -Wall -g -Ilibarcus/include main.cpp libarcus/lib/libmemcached.a libarcus/lib/libmemcachedutil.a libarcus/lib/libzookeeper_mt.a -pthread -lsasl2 -o main;./main
+
+ADD: SUCCESS
+GET:HELLO_TEST_VALUE
+DEL: SUCCESS
+NOT FOUND
+GET:
+FINISHED!
 ```

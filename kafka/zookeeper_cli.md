@@ -24,9 +24,12 @@ $ ./bin/zkCli.sh -server zookeeper-dms2.ndrive.svc.ar1.io.navercorp.com:2181/kaf
 // ls, get 명령어를 활용하여 저장된 값을 확인한다.
 ```
 
+<img width="720" alt="스크린샷 2021-06-07 오후 10 32 37" src="https://media.oss.navercorp.com/user/1698/files/9b7a0900-c7e0-11eb-9fd1-f0e3de038142">
+
+
 ## kafka 관련 Zookeeper Tree
-* /kafka/brokers
-* /kafka/consumers
+
+<img width="720" alt="kafka" src="https://media.oss.navercorp.com/user/1698/files/87360c00-c7e0-11eb-896f-cb61a292ebe1">
 
 
 ## Zookeeper 특성 및 기본 명령어 

@@ -1,0 +1,85 @@
+<mxfile host="app.diagrams.net" modified="2022-09-01T07:54:41.901Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.85 Whale/3.16.138.21 Safari/537.36" etag="QaPSeKsqgByrbbvjxv-S" version="20.2.7" type="github">
+  <diagram id="hqZW55G89YO83K4BKV3z" name="페이지-1">
+    <mxGraphModel dx="864" dy="828" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="M8BjwhIXYFzp4q1Wmbrh-1" value="EventStream&lt;br&gt;(Kafka)" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="100" y="440" width="190" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="M8BjwhIXYFzp4q1Wmbrh-12" value="UserConsistencyCheckEvent" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="354" y="390" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="M8BjwhIXYFzp4q1Wmbrh-13" value="UserConsistencyCheckEvent" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="370" y="555" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="M8BjwhIXYFzp4q1Wmbrh-14" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="580" y="290" width="160" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="M8BjwhIXYFzp4q1Wmbrh-2" value="" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="M8BjwhIXYFzp4q1Wmbrh-14" vertex="1">
+          <mxGeometry width="160" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="M8BjwhIXYFzp4q1Wmbrh-8" value="GetTargetUsersAction&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22%22%20style%3D%22verticalLabelPosition%3Dbottom%3BverticalAlign%3Dtop%3Bhtml%3D1%3Bshape%3Dmxgraph.flowchart.on-page_reference%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22150%22%20y%3D%22390%22%20width%3D%22160%22%20height%3D%2290%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="M8BjwhIXYFzp4q1Wmbrh-14" vertex="1">
+          <mxGeometry x="10" y="10" width="145" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="M8BjwhIXYFzp4q1Wmbrh-9" value="CheckConsistencyAction" style="ellipse;whiteSpace=wrap;html=1;" parent="M8BjwhIXYFzp4q1Wmbrh-14" vertex="1">
+          <mxGeometry x="10" y="130" width="140" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="M8BjwhIXYFzp4q1Wmbrh-15" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="580" y="585" width="160" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="M8BjwhIXYFzp4q1Wmbrh-16" value="" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="M8BjwhIXYFzp4q1Wmbrh-15" vertex="1">
+          <mxGeometry width="160" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="M8BjwhIXYFzp4q1Wmbrh-17" value="GetTargetUsersAction&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22%22%20style%3D%22verticalLabelPosition%3Dbottom%3BverticalAlign%3Dtop%3Bhtml%3D1%3Bshape%3Dmxgraph.flowchart.on-page_reference%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22150%22%20y%3D%22390%22%20width%3D%22160%22%20height%3D%2290%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="M8BjwhIXYFzp4q1Wmbrh-15" vertex="1">
+          <mxGeometry x="10" y="10" width="145" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="M8BjwhIXYFzp4q1Wmbrh-18" value="CheckConsistencyAction" style="ellipse;whiteSpace=wrap;html=1;" parent="M8BjwhIXYFzp4q1Wmbrh-15" vertex="1">
+          <mxGeometry x="10" y="130" width="140" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="M8BjwhIXYFzp4q1Wmbrh-19" value="ConsistencyChecker1&lt;br&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="630" y="530" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="M8BjwhIXYFzp4q1Wmbrh-21" value="ConsistencyChecker2" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="630" y="825" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="M8BjwhIXYFzp4q1Wmbrh-22" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.994;entryY=0.322;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" parent="1" source="M8BjwhIXYFzp4q1Wmbrh-2" target="M8BjwhIXYFzp4q1Wmbrh-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="520" as="sourcePoint" />
+            <mxPoint x="440" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="M8BjwhIXYFzp4q1Wmbrh-23" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1.004;exitY=0.641;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="M8BjwhIXYFzp4q1Wmbrh-1" target="M8BjwhIXYFzp4q1Wmbrh-18" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="590" y="360" as="sourcePoint" />
+            <mxPoint x="298.8599999999999" y="517.6199999999999" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="M8BjwhIXYFzp4q1Wmbrh-24" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="M8BjwhIXYFzp4q1Wmbrh-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="555" as="sourcePoint" />
+            <mxPoint x="590" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="M8BjwhIXYFzp4q1Wmbrh-25" value="" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="1" target="M8BjwhIXYFzp4q1Wmbrh-8" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="260" as="sourcePoint" />
+            <mxPoint x="440" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="M8BjwhIXYFzp4q1Wmbrh-27" value="매일 설정에 명시된 시간마다 액션을 수행하여, 정합성 검사 대상 사용자 별로 kafka에 pub 함&lt;br&gt;&lt;br&gt;(동시에 하나의 액션만 수행하도록 작업)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="450" y="170" width="290" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="M8BjwhIXYFzp4q1Wmbrh-28" value="event-consumer 를 통해 정합성 검사 대상 사용자를 이벤트로 받아 검사를 수행한다." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="220" y="825" width="290" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="M8BjwhIXYFzp4q1Wmbrh-29" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" parent="1" source="M8BjwhIXYFzp4q1Wmbrh-28" target="M8BjwhIXYFzp4q1Wmbrh-18" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="510" y="880" as="sourcePoint" />
+            <mxPoint x="581.4124525789596" y="934.5225365131664" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
